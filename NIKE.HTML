@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 85%;
+                margin: 0 auto;
+                color: black;
+                transition: 0.25s background ease-in-out;
+                background-color: aqua;
+            }
+
+            nav {
+                width: 85%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                z-index: 99999;
+            }
+
+            .logo-img {
+                width: 170px;
+                height: 100px;
+                position: relative;
+                left: -20px;
+            }
+
+            .logo-img img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .menu {
+                display: flex;
+
+            }
+
+            .item {
+                display: flex;
+                padding: 10px;
+                /* font-weight: 500; */
+                font-weight: 900;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                cursor: pointer;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .content {
+                /* display: flex; */
+                position: relative;
+            }
+
+            .heading {
+                /* width: 500px; */
+                font-size: 45px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-transform: uppercase;
+                font-style: bold;
+                font-weight: 500;
+            }
+
+            .description {
+                width: 500px;
+                font-size: 15px;
+                text-align: justify;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.4rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                margin-top: 50px;
+                background-color: black;
+                color: aliceblue;
+                border-radius: 20px;
+            }
+
+            .header img {
+                width: 500px;
+                transform: rotate(5deg);
+            }
+
+            .btn button:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            .animation {
+                width: 85%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                bottom: 10px;
+                z-index: 9999999;
+            }
+
+            .variant img {
+                width: 100px;
+            }
+
+            .active {
+                animation: jump 0.5s infinite linear;
+                cursor: pointer;
+            }
+
+            .two {
+                cursor: pointer;
+            }
+
+            .three {
+                cursor: pointer;
+            }
+
+            .list-img {
+                width: 100%;
+                margin: auto;
+            }
+
+            @keyframes jump {
+                0% {
+                    transform: translateY(-20px);
+                }
+
+                50% {
+                    transform: translateY(0px);
+                }
+
+                100% {
+                    transform: translateY(20px);
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo-img">
+                <img src="images/logo.png" alt="">
+            </div>
+            <ul class="menu">
+                <li class="item">Man</li>
+                <li class="item">Women</li>
+                <li class="item">Kids</li>
+                <li class="item">Customise</li>
+                <li class="item">Sale</li>
+            </ul>
+        </nav>
+        <div class="header">
+            <div class="content">
+                <h1 class="heading">GET IN AND GO</h1>
+                <h4 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni porr
+                    tenetur veritatis delectus ab, soluta repellat?
+                    Officiis cumque ex, consectetur nisi nemo aliquam, aspernatur conse
+                    quuntur quidem, dolores ullam facilis tenetur.</h4>
+                <button class="btn">Buynow</button>
+            </div>
+            <img src="images/1.png" alt="">
+        </div>
+        <div class="animation">
+            <div class="variant one active">
+                <img src="images/1.png" alt="">
+            </div>
+            <div class="variant two">
+                <img src="images/\5.png" alt="">
+            </div>
+            <div class="variant three ">
+                <img src="images/6.png" alt="">
+            </div>
+        </div>
+        <div class="list-img">
+            <img src="images/1.png" alt="">
+            <img src="images/2.png" alt="">
+            <img src="images/3.png" alt="">
+            <img src="images/4.png" alt="">
+            <img src="images/5.png" alt="">
+            <img src="images/6.png" alt="" width="50%">
+        </div>
+
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".one").on('click', function () {
+                $("body").css({
+                    background: '#f67280', color: 'white'
+                })
+                $(".btn").css({
+                    background: 'blue',
+                    color: 'white'
+                })
+            })
+            $(".two").on('click', function () {
+                $("body").css({
+                    background: 'black', color: 'white'
+                })
+                $(".btn").css({
+                    background: 'white',
+                    color: 'black'
+                })
+            })
+            $(".three").on('click', function () {
+                $("body").css({
+                    background: '#11cbd7', color: 'white'
+                })
+                $(".btn").css({
+                    background: 'black',
+                    color: 'white'
+                })
+            })
+        })
+    </script>
+
+</html>
